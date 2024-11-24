@@ -2,7 +2,7 @@
 # !pip install -r requirements.txt
 
 # %%
-from functions.py import *
+import functions.py
 import time
 import datetime
 
