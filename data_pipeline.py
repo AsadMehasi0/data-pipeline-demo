@@ -5,12 +5,21 @@
 import functions as f
 import time
 import datetime
+import os
+import base64
+
+CLIENT_ID = os.environ["client_id"]
+client_id_encoded = base64.b64encode(f"CLIENT_ID".encode("ascii"))
 
 print("Starting data pipeline at ", datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S'))
 print("----------------------------------------------")
 
 # Step 1: extract video IDs
 t0 = time.time()
+
+print(f"ID: {CLIENT_ID}")
+print(f"ID encoded: {client_id_encoded}")
+
 f.getVideoIDs()
 t1 = time.time()
 print("Step 1: Done")
