@@ -5,11 +5,15 @@
 import functions as f
 import time
 import datetime
+
+#################################### EXAMPLE OF HOW TO USE SECRETS ###############################################
 import os
 import base64
 
 CLIENT_ID = os.environ["client_id"]
 client_id_encoded = base64.b64encode(f"CLIENT_ID".encode("ascii"))
+##################################################################################################################
+
 
 print("Starting data pipeline at ", datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S'))
 print("----------------------------------------------")
